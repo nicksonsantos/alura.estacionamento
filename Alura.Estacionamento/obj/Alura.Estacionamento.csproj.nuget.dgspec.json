@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lolfe\\source\\repos\\nicksonsantos\\alura.estacionamento\\Alura.Estacionamento\\Alura.Estacionamento.csproj": {}
+    "C:\\Users\\lolfe\\Source\\Repos\\nicksonsantos\\alura.estacionamento\\Alura.Estacionamento\\Alura.Estacionamento.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lolfe\\source\\repos\\nicksonsantos\\alura.estacionamento\\Alura.Estacionamento\\Alura.Estacionamento.csproj": {
+    "C:\\Users\\lolfe\\Source\\Repos\\nicksonsantos\\alura.estacionamento\\Alura.Estacionamento\\Alura.Estacionamento.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lolfe\\source\\repos\\nicksonsantos\\alura.estacionamento\\Alura.Estacionamento\\Alura.Estacionamento.csproj",
+        "projectUniqueName": "C:\\Users\\lolfe\\Source\\Repos\\nicksonsantos\\alura.estacionamento\\Alura.Estacionamento\\Alura.Estacionamento.csproj",
         "projectName": "Alura.Estacionamento",
-        "projectPath": "C:\\Users\\lolfe\\source\\repos\\nicksonsantos\\alura.estacionamento\\Alura.Estacionamento\\Alura.Estacionamento.csproj",
+        "projectPath": "C:\\Users\\lolfe\\Source\\Repos\\nicksonsantos\\alura.estacionamento\\Alura.Estacionamento\\Alura.Estacionamento.csproj",
         "packagesPath": "C:\\Users\\lolfe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lolfe\\source\\repos\\nicksonsantos\\alura.estacionamento\\Alura.Estacionamento\\obj\\",
+        "outputPath": "C:\\Users\\lolfe\\Source\\Repos\\nicksonsantos\\alura.estacionamento\\Alura.Estacionamento\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\lolfe\\AppData\\Roaming\\NuGet\\NuGet.Config",
