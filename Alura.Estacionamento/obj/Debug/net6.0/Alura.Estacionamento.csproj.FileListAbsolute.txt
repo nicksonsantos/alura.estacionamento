@@ -1,0 +1,15 @@
+C:\Users\lolfe\source\repos\nicksonsantos\alura.estacionamento\Alura.Estacionamento\bin\Debug\net6.0\Alura.Estacionamento.exe
+C:\Users\lolfe\source\repos\nicksonsantos\alura.estacionamento\Alura.Estacionamento\bin\Debug\net6.0\Alura.Estacionamento.deps.json
+C:\Users\lolfe\source\repos\nicksonsantos\alura.estacionamento\Alura.Estacionamento\bin\Debug\net6.0\Alura.Estacionamento.runtimeconfig.json
+C:\Users\lolfe\source\repos\nicksonsantos\alura.estacionamento\Alura.Estacionamento\bin\Debug\net6.0\Alura.Estacionamento.dll
+C:\Users\lolfe\source\repos\nicksonsantos\alura.estacionamento\Alura.Estacionamento\bin\Debug\net6.0\Alura.Estacionamento.pdb
+C:\Users\lolfe\source\repos\nicksonsantos\alura.estacionamento\Alura.Estacionamento\obj\Debug\net6.0\Alura.Estacionamento.csproj.AssemblyReference.cache
+C:\Users\lolfe\source\repos\nicksonsantos\alura.estacionamento\Alura.Estacionamento\obj\Debug\net6.0\Alura.Estacionamento.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lolfe\source\repos\nicksonsantos\alura.estacionamento\Alura.Estacionamento\obj\Debug\net6.0\Alura.Estacionamento.AssemblyInfoInputs.cache
+C:\Users\lolfe\source\repos\nicksonsantos\alura.estacionamento\Alura.Estacionamento\obj\Debug\net6.0\Alura.Estacionamento.AssemblyInfo.cs
+C:\Users\lolfe\source\repos\nicksonsantos\alura.estacionamento\Alura.Estacionamento\obj\Debug\net6.0\Alura.Estacionamento.csproj.CoreCompileInputs.cache
+C:\Users\lolfe\source\repos\nicksonsantos\alura.estacionamento\Alura.Estacionamento\obj\Debug\net6.0\Alura.Estacionamento.dll
+C:\Users\lolfe\source\repos\nicksonsantos\alura.estacionamento\Alura.Estacionamento\obj\Debug\net6.0\refint\Alura.Estacionamento.dll
+C:\Users\lolfe\source\repos\nicksonsantos\alura.estacionamento\Alura.Estacionamento\obj\Debug\net6.0\Alura.Estacionamento.pdb
+C:\Users\lolfe\source\repos\nicksonsantos\alura.estacionamento\Alura.Estacionamento\obj\Debug\net6.0\Alura.Estacionamento.genruntimeconfig.cache
+C:\Users\lolfe\source\repos\nicksonsantos\alura.estacionamento\Alura.Estacionamento\obj\Debug\net6.0\ref\Alura.Estacionamento.dll
