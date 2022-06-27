@@ -56,5 +56,67 @@ namespace Alura.Estacionamento.Testes
             // Assert
             Assert.Equal(2, faturamento);
         }
+
+        [Theory]
+        [InlineData("Neymar da Silva Santos Júnior", "ASD-1498", "Preto", "Gol")]
+        public void TestaLocalizaVeiculoNoPatio(string proprietario, string placa, string cor, string modelo)
+        {
+            // Arrange
+            var estacionamento = new Patio();
+            var veiculo = new Veiculo();
+            veiculo.Proprietario = proprietario;
+            veiculo.Placa = placa;
+            veiculo.Cor = cor;
+            veiculo.Modelo = modelo;
+
+            estacionamento.RegistrarEntradaVeiculo(veiculo);
+
+            // Act
+            var consultado = estacionamento.PesquisaVeiculo(placa);
+
+            // Assert
+            Assert.Equal(placa, consultado.Placa);
+        }
+
+        [Fact]
+        public void TestaAlterarDadosVeiculo()
+        {
+            // Arrange
+            var estacionamento = new Patio();
+            var veiculo = new Veiculo();
+            veiculo.Proprietario = "José Silva";
+            veiculo.Placa = "ZXC-8524";
+            veiculo.Cor = "Verde";
+            veiculo.Modelo = "Opala";
+            estacionamento.RegistrarEntradaVeiculo(veiculo);
+
+            var veiculoAlterado = new Veiculo();
+            veiculoAlterado.Proprietario = "José Silva";
+            veiculoAlterado.Placa = "ZXC-8524";
+            veiculoAlterado.Cor = "Preto"; // Alterado
+            veiculoAlterado.Modelo = "Opala";
+            // Act
+            Veiculo alterado = estacionamento.AlterarDadosVeiculo(veiculoAlterado);
+
+            // Assert
+            Assert.Equal(veiculoAlterado.Cor, alterado.Cor);
+        }
+
+        [Fact]
+        public void DadosAutomovel()
+        {
+            //Arrange
+            var carro = new Veiculo();
+            carro.Proprietario = "Carlos Silva";
+            carro.Placa = "ZAP-7419";
+            carro.Cor = "Verde";
+            carro.Modelo = "Variante";
+
+            //Act
+            string dados = carro.ToString();
+
+            //Assert
+            Assert.Contains("Tipo do Veículo: Automovel", dados);
+        }
     }
 }
