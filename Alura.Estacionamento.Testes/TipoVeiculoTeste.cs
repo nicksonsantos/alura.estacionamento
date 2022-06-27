@@ -3,7 +3,7 @@ using Alura.Estacionamento.Modelos;
 
 namespace Alura.Estacionamento.Testes
 {
-    public class TipoVeiculoTestes
+    public class TipoVeiculoTeste
     {
         // Arrange
         // Act
