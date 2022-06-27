@@ -5,18 +5,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Xunit.Abstractions;
 
 namespace Alura.Estacionamento.Testes
 {
-    public class PatioTeste
+    public class PatioTeste : IDisposable
     {
+        private Operador operador;
         private Patio estacionamento;
         private Veiculo veiculo;
+        public ITestOutputHelper Output;
 
-        public PatioTeste()
+        public PatioTeste(ITestOutputHelper output)
         {
+            Output = output;
+            output.WriteLine("Construtor invocado.");
             estacionamento = new Patio();
             veiculo = new Veiculo();
+            operador = new Operador();
+            operador.Nome = "Pedro Certezas";
         }
 
         [Fact]
@@ -28,7 +35,7 @@ namespace Alura.Estacionamento.Testes
             veiculo.Cor = "Preto";
             veiculo.Modelo = "Corolla";
             veiculo.Placa = "asd-9999";
-
+            estacionamento.OperadorPatio = operador;
             estacionamento.RegistrarEntradaVeiculo(veiculo);
             estacionamento.RegistrarSaidaVeiculo(veiculo.Placa);
 
@@ -50,8 +57,8 @@ namespace Alura.Estacionamento.Testes
             veiculo.Proprietario = proprietario;
             veiculo.Placa = placa;
             veiculo.Cor = cor;
-            veiculo.Modelo = modelo;         
-
+            veiculo.Modelo = modelo;
+            estacionamento.OperadorPatio = operador;
             estacionamento.RegistrarEntradaVeiculo(veiculo);
             estacionamento.RegistrarSaidaVeiculo(veiculo.Placa);
 
@@ -71,7 +78,7 @@ namespace Alura.Estacionamento.Testes
             veiculo.Placa = placa;
             veiculo.Cor = cor;
             veiculo.Modelo = modelo;
-
+            estacionamento.OperadorPatio = operador;
             estacionamento.RegistrarEntradaVeiculo(veiculo);
 
             // Act
@@ -89,6 +96,7 @@ namespace Alura.Estacionamento.Testes
             veiculo.Placa = "ZXC-8524";
             veiculo.Cor = "Verde";
             veiculo.Modelo = "Opala";
+            estacionamento.OperadorPatio = operador;
             estacionamento.RegistrarEntradaVeiculo(veiculo);
 
             var veiculoAlterado = new Veiculo();
@@ -103,6 +111,9 @@ namespace Alura.Estacionamento.Testes
             Assert.Equal(veiculoAlterado.Cor, alterado.Cor);
         }
 
-        
+        public void Dispose()
+        {
+            Output.WriteLine("Execução do Cleanup: Limpando os objetos.");
+        }
     }
 }
