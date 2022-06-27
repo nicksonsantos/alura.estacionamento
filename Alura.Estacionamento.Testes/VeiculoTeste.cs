@@ -43,13 +43,13 @@ namespace Alura.Estacionamento.Testes
         [ClassData(typeof(Veiculo))]
         public void TestaVeiculoClass(Veiculo modelo)
         {
-            //Arrange
+            // Arrange
 
-            //Act
+            // Act
             veiculo.Acelerar(10);
             modelo.Acelerar(10);
 
-            //Assert
+            // Assert
             Assert.Equal(modelo.VelocidadeAtual, veiculo.VelocidadeAtual);
         }
 
@@ -62,17 +62,60 @@ namespace Alura.Estacionamento.Testes
         [Fact]
         public void FichaDeInformacaoDoVeiculo()
         {
-            //Arrange
+            // Arrange
             veiculo.Proprietario = "Carlos Silva";
             veiculo.Placa = "ZAP-7419";
             veiculo.Cor = "Verde";
             veiculo.Modelo = "Variante";
 
-            //Act
+            // Act
             string dados = veiculo.ToString();
 
-            //Assert
+            // Assert
             Assert.Contains("Tipo do Veículo: Automovel", dados);
+        }
+
+        [Fact]
+        public void TestaNomeProprietarioVeiculoComMenosDeTresCaracteres()
+        {
+            // Arrange
+            string nomeProprietarioErrado = "Ab";
+
+            // Assert
+            Assert.Throws<FormatException>(
+                //Act
+                () => new Veiculo().Proprietario = nomeProprietarioErrado
+            );
+
+        }
+
+        [Fact]
+        public void TestaMensagemDeExcecaoDoQuartoCaractereDaPlaca()
+        {
+            // Arrange
+            string placaErrada = "ASDF8888";
+
+            // Act
+            var mensagem = Assert.Throws<FormatException>(
+                () => new Veiculo().Placa = placaErrada);
+
+            // Assert
+            Assert.Equal("O 4° caractere deve ser um hífen", mensagem.Message);
+
+        }
+
+        [Fact]
+        public void TestaUltimosCaracteresPlacaVeiculoComoNumeros()
+        {
+            // Arrange
+            string placaFormatoErrado = "ASD-995U";
+
+            // Assert
+            Assert.Throws<FormatException>(
+                // Act
+                () => new Veiculo().Placa = placaFormatoErrado
+            );
+
         }
 
         public void Dispose()
